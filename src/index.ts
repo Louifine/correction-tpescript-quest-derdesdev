@@ -46,3 +46,67 @@
 // }
 
 // console.log("le type de retour de la fonction : ", typeof addition(5, 7));
+
+// Niveau 2
+
+// => classe :
+// structure qui définit les caractéristiques et le comportement d'un objet
+// => propriétés
+// => méthode
+
+// constructeur
+// une méthode spéciale qui permet d'initialiser les valeurs des propriétés d'une instance
+
+// une instance :
+// Un objet créé à partir d'une classe
+
+class Gateau {
+  forme: string;
+  private nombreDePart: number;
+  Gout: string;
+
+  constructor(
+    paramForme: string,
+    paramNombreDePart: number,
+    paramGout: string
+  ) {
+    this.forme = paramForme;
+    this.nombreDePart = paramNombreDePart;
+    this.Gout = paramGout;
+  }
+
+  reduitUnePart() {
+    this.nombreDePart -= 1;
+    // this.Gout = "fraise";
+  }
+
+  donneMoiLeNombreDePartSTP(): void {
+    console.log("test", this.nombreDePart);
+  }
+}
+
+const fraisier: Gateau = new Gateau("rond", 36, "fraise");
+fraisier.Gout = "mangue";
+fraisier.reduitUnePart();
+
+console.log("part du gateau : ", fraisier);
+// fraisier.nombreDePart = 15;
+
+console.log(
+  "fraisier est elle ue instance de gateau : ",
+  fraisier instanceof Gateau
+);
+
+// - Qu'est ce que `this` dans une classe ?
+//  mot clé
+// Faire reférence à l'instance de l'objet actuel sur lequel on se situe
+
+// - Qu'est ce qu'une méthode de classe ?
+// fonction attaché à l'instance d'une classe
+// Comment l'executer ?
+// nomDeMonInstance.nomDeMaMethode()
+
+// - Qu'est ce que la visibilité des propriétés ?
+// public
+// private
+// protected
