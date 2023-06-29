@@ -60,42 +60,42 @@
 // une instance :
 // Un objet créé à partir d'une classe
 
-class Gateau {
-  forme: string;
-  private nombreDePart: number;
-  Gout: string;
+// class Gateau {
+//   forme: string;
+//   private nombreDePart: number;
+//   Gout: string;
 
-  constructor(
-    paramForme: string,
-    paramNombreDePart: number,
-    paramGout: string
-  ) {
-    this.forme = paramForme;
-    this.nombreDePart = paramNombreDePart;
-    this.Gout = paramGout;
-  }
+//   constructor(
+//     paramForme: string,
+//     paramNombreDePart: number,
+//     paramGout: string
+//   ) {
+//     this.forme = paramForme;
+//     this.nombreDePart = paramNombreDePart;
+//     this.Gout = paramGout;
+//   }
 
-  reduitUnePart() {
-    this.nombreDePart -= 1;
-    // this.Gout = "fraise";
-  }
+//   reduitUnePart() {
+//     this.nombreDePart -= 1;
+//     // this.Gout = "fraise";
+//   }
 
-  donneMoiLeNombreDePartSTP(): void {
-    console.log("test", this.nombreDePart);
-  }
-}
+//   donneMoiLeNombreDePartSTP(): void {
+//     console.log("test", this.nombreDePart);
+//   }
+// }
 
-const fraisier: Gateau = new Gateau("rond", 36, "fraise");
-fraisier.Gout = "mangue";
-fraisier.reduitUnePart();
+// const fraisier: Gateau = new Gateau("rond", 36, "fraise");
+// fraisier.Gout = "mangue";
+// fraisier.reduitUnePart();
 
-console.log("part du gateau : ", fraisier);
-// fraisier.nombreDePart = 15;
+// console.log("part du gateau : ", fraisier);
+// // fraisier.nombreDePart = 15;
 
-console.log(
-  "fraisier est elle ue instance de gateau : ",
-  fraisier instanceof Gateau
-);
+// console.log(
+//   "fraisier est elle ue instance de gateau : ",
+//   fraisier instanceof Gateau
+// );
 
 // - Qu'est ce que `this` dans une classe ?
 //  mot clé
@@ -112,3 +112,25 @@ console.log(
 // protected
 
 // N'oubliez pas que vous êtes au top !!! 🔥🔥🔥
+
+// Niveau 3
+
+import { spaceship } from "./classeFille";
+import { Vehicule } from "./classeMere";
+
+let ussEnterprise = new spaceship(
+  "test",
+  "fauconMillenium",
+  2500,
+  "IRF95ZEF",
+  623
+);
+
+let monPetitVélo = new Vehicule("peugeot", "404", 2005, 623);
+
+console.log(ussEnterprise);
+console.log(monPetitVélo);
+ussEnterprise.calculateKm(10);
+monPetitVélo.calculateKm(10);
+console.log(ussEnterprise);
+console.log(monPetitVélo);
